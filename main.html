@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda - Catálogo</title>
+<style>
+  :root {
+    --negro: #1a1a1a;
+    --gris-oscuro: #4a4a4a;
+    --gris-claro: #f4f4f2;
+    --blanco: #ffffff;
+    --rojo: #d1272c;
+    --rojo-oscuro: #a01f22;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--gris-claro);
+    color: var(--negro);
+    line-height: 1.5;
+  }
+  header {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header .logo { font-weight: 700; font-size: 18px; letter-spacing: 0.5px; cursor: pointer; }
+  header .logo span { color: var(--rojo); }
+  header nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+    opacity: 0.85;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+
+  /* ---------- VISTA CATALOGO (grilla) ---------- */
+  .grilla-titulo { font-size: 22px; margin-bottom: 20px; }
+  .grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #e6e5df;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  .card .foto-mini {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: var(--gris-claro);
+    display: block;
+  }
+  .card .card-info { padding: 14px; }
+  .card .categoria-mini {
+    color: var(--rojo);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .card h3 { font-size: 15px; margin-bottom: 6px; }
+  .card .precio-mini { font-weight: 700; font-size: 16px; }
+  .card .precio-mini .antes {
+    font-size: 12px;
+    color: var(--gris-oscuro);
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-right: 4px;
+  }
+
+  /* ---------- VISTA DETALLE ---------- */
+  .volver {
+    background: none;
+    border: none;
+    color: var(--gris-oscuro);
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .volver:hover { color: var(--negro); }
+  .producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: var(--blanco);
+    border-radius: 10px;
+    padding: 32px;
+  }
+  .foto {
+    background: var(--gris-claro);
+    border: 1px solid #e0dfd9;
+    border-radius: 8px;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .info .categoria {
+    color: var(--rojo);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .info h1 { font-size: 26px; margin-bottom: 12px; }
+  .precio {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 16px;
+  }
+  .precio .antes {
+    font-size: 16px;
+    color: var(--gris-oscuro);
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-right: 8px;
+  }
+  .info p.desc { color: var(--gris-oscuro); margin-bottom: 20px; font-size: 15px; }
+  .specs { list-style: none; margin-bottom: 24px; }
+  .specs li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eeece5;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .specs li span:first-child { color: var(--gris-oscuro); }
+  .specs li span:last-child { font-weight: 600; }
+  .cta { display: flex; gap: 12px; }
+  .btn-principal {
+    background: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    transition: background 0.15s;
+    text-decoration: none;
+    text-align: center;
+  }
+  .btn-principal:hover { background: var(--rojo-oscuro); }
+  .badge-stock {
+    display: inline-block;
+    background: #fde8e8;
+    color: var(--rojo-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  footer { text-align: center; padding: 24px; color: var(--gris-oscuro); font-size: 13px; }
+
+  .oculto { display: none; }
+
+  @media (max-width: 640px) {
+    .producto { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="mostrarCatalogo()">tienda<span>.</span></div>
+  <nav>
+    <a href="#" onclick="mostrarCatalogo(); return false;">Catálogo</a>
+    <a href="https://wa.me/5490000000000" target="_blank">Contacto</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- ===== VISTA 1: CATALOGO ===== -->
+  <div id="vista-catalogo">
+    <h2 class="grilla-titulo">Catálogo</h2>
+    <div class="grilla" id="grilla-productos"></div>
+  </div>
+
+  <!-- ===== VISTA 2: DETALLE DE PRODUCTO ===== -->
+  <div id="vista-detalle" class="oculto">
+    <button class="volver" onclick="mostrarCatalogo()">&larr; volver al catálogo</button>
+    <div class="producto">
+      <div class="foto">
+        <img id="detalle-foto" src="" alt="">
+      </div>
+      <div class="info">
+        <div class="categoria" id="detalle-categoria"></div>
+        <h1 id="detalle-titulo"></h1>
+        <span class="badge-stock oculto" id="detalle-stock"></span>
+        <div class="precio" id="detalle-precio"></div>
+        <p class="desc" id="detalle-desc"></p>
+        <ul class="specs" id="detalle-specs"></ul>
+        <div class="cta">
+          <a class="btn-principal" id="detalle-whatsapp" target="_blank">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>Retiro en punto físico &middot; Envíos a coordinar</footer>
+
+<script>
+/* ======================================================
+   1) TUS PRODUCTOS VAN ACA. Copiá un bloque { ... } y
+   pegalo dentro de los corchetes [ ] para agregar uno más.
+   ====================================================== */
+const productos = [
+  {
+    categoria: "Electrónica",
+    titulo: "Auriculares inalámbricos XZ200",
+    foto: "https://via.placeholder.com/600x600?text=Foto+1",
+    precioAntes: "$45.000",
+    precioAhora: "$36.000",
+    stock: "Último en stock",
+    desc: "Cancelación de ruido activa, batería de 30 horas y estuche de carga rápida. Ideal para uso diario y viajes.",
+    specs: [
+      { nombre: "Batería", valor: "30 hs" },
+      { nombre: "Conexión", valor: "Bluetooth 5.3" },
+      { nombre: "Color", valor: "Negro" }
+    ],
+    whatsapp: "https://wa.me/5490000000000?text=Hola!%20Te%20consulto%20por%20los%20auriculares%20XZ200"
+  },
+  {
+    categoria: "Hogar",
+    titulo: "Cafetera eléctrica 12 tazas",
+    foto: "https://via.placeholder.com/600x600?text=Foto+2",
+    precioAntes: "",
+    precioAhora: "$28.500",
+    stock: "",
+    desc: "Cafetera de filtro con jarra de vidrio, placa térmica y apagado automático.",
+    specs: [
+      { nombre: "Capacidad", valor: "12 tazas" },
+      { nombre: "Potencia", valor: "900W" },
+      { nombre: "Color", valor: "Blanco" }
+    ],
+    whatsapp: "https://wa.me/5490000000000?text=Hola!%20Te%20consulto%20por%20la%20cafetera"
+  },
+  {
+    categoria: "Electrónica",
+    titulo: "Parlante Bluetooth portátil",
+    foto: "https://via.placeholder.com/600x600?text=Foto+3",
+    precioAntes: "$22.000",
+    precioAhora: "$17.900",
+    stock: "",
+    desc: "Resistente al agua (IPX6), 12 horas de batería y sonido estéreo con graves reforzados.",
+    specs: [
+      { nombre: "Batería", valor: "12 hs" },
+      { nombre: "Resistencia", valor: "IPX6" },
+      { nombre: "Color", valor: "Rojo/Negro" }
+    ],
+    whatsapp: "https://wa.me/5490000000000?text=Hola!%20Te%20consulto%20por%20el%20parlante"
+  }
+];
+
+/* ======================================================
+   2) A partir de acá es la lógica que arma la página.
+   No hace falta tocar nada de esto.
+   ====================================================== */
+function renderizarGrilla() {
+  const grilla = document.getElementById("grilla-productos");
+  grilla.innerHTML = "";
+  productos.forEach((p, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = () => mostrarDetalle(i);
+    card.innerHTML = `
+      <img class="foto-mini" src="${p.foto}" alt="${p.titulo}">
+      <div class="card-info">
+        <div class="categoria-mini">${p.categoria}</div>
+        <h3>${p.titulo}</h3>
+        <div class="precio-mini">
+          ${p.precioAntes ? `<span class="antes">${p.precioAntes}</span>` : ""}${p.precioAhora}
+        </div>
+      </div>
+    `;
+    grilla.appendChild(card);
+  });
+}
+
+function mostrarDetalle(indice) {
+  const p = productos[indice];
+  document.getElementById("detalle-foto").src = p.foto;
+  document.getElementById("detalle-foto").alt = p.titulo;
+  document.getElementById("detalle-categoria").textContent = p.categoria;
+  document.getElementById("detalle-titulo").textContent = p.titulo;
+  document.getElementById("detalle-desc").textContent = p.desc;
+  document.getElementById("detalle-precio").innerHTML =
+    (p.precioAntes ? `<span class="antes">${p.precioAntes}</span>` : "") + p.precioAhora;
+  document.getElementById("detalle-whatsapp").href = p.whatsapp;
+
+  const stockEl = document.getElementById("detalle-stock");
+  if (p.stock) {
+    stockEl.textContent = p.stock;
+    stockEl.classList.remove("oculto");
+  } else {
+    stockEl.classList.add("oculto");
+  }
+
+  const specsEl = document.getElementById("detalle-specs");
+  specsEl.innerHTML = "";
+  p.specs.forEach(s => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${s.nombre}</span><span>${s.valor}</span>`;
+    specsEl.appendChild(li);
+  });
+
+  document.getElementById("vista-catalogo").classList.add("oculto");
+  document.getElementById("vista-detalle").classList.remove("oculto");
+  window.scrollTo(0, 0);
+}
+
+function mostrarCatalogo() {
+  document.getElementById("vista-detalle").classList.add("oculto");
+  document.getElementById("vista-catalogo").classList.remove("oculto");
+  window.scrollTo(0, 0);
+}
+
+renderizarGrilla();
+</script>
+
+</body>
+</html>

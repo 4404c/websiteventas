@@ -5,6 +5,54 @@
    ====================================================== */
 
 let filtroActivo = "Todos";
+let terminoBusqueda = "";
+
+function normalizarTexto(texto) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function renderizarGrilla() {
+  const grilla = document.getElementById("grilla-productos");
+  grilla.innerHTML = "";
+
+  const busquedaNormalizada = normalizarTexto(terminoBusqueda.trim());
+
+  const lista = productos.filter((p, i) => {
+    p._indice = i;
+    const coincideEtiqueta = filtroActivo === "Todos" || p.etiquetas.includes(filtroActivo);
+    const coincideBusqueda =
+      busquedaNormalizada === "" || normalizarTexto(p.titulo).includes(busquedaNormalizada);
+    return coincideEtiqueta && coincideBusqueda;
+  });
+
+  if (lista.length === 0) {
+    grilla.innerHTML = `<p class="sin-resultados">No se encontraron productos.</p>`;
+    return;
+  }
+
+  lista.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = () => mostrarDetalle(p._indice);
+    card.innerHTML = `
+      <img class="foto-mini" src="${p.fotos[0]}" alt="${p.titulo}">
+      <div class="card-info">
+        <div class="etiquetas-mini">
+          ${p.etiquetas.slice(0, 1).map(e => `<span class="chip">${e}</span>`).join("")}
+          ${p.etiquetas.length > 1 ? `<span class="chip">+${p.etiquetas.length - 1}</span>` : ""}
+        </div>
+        <h3>${p.titulo}</h3>
+        <div class="precio-mini">
+          ${p.precioAhora}${p.precioAntes ? `<span class="antes">${p.precioAntes}</span>` : ""}
+        </div>
+      </div>
+    `;
+    grilla.appendChild(card);
+  });
+}
 
 function obtenerEtiquetasUnicas() {
   const set = new Set();
@@ -138,5 +186,10 @@ function mostrarCatalogo() {
 }
 
 /* Arranque de la página */
+document.getElementById("buscador").addEventListener("input", (e) => {
+  terminoBusqueda = e.target.value;
+  renderizarGrilla();
+});
+
 renderizarFiltros();
 renderizarGrilla();

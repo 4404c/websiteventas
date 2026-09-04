@@ -30,13 +30,25 @@ const productos = [
     whatsapp: "https://wa.me/5490000000000?text=Hola!%20Te%20consulto%20por%20los%20auriculares%20XZ200"
   },
   {
-    titulo: "Cafetera eléctrica 12 tazas",
+    titulo: "Alfombra Peluda Nórdica 2m x1,40m – Pelo Largo Premium",
     etiquetas: ["Hogar"],
     fotos: ["https://via.placeholder.com/600x600?text=Foto+2"],
     precioAntes: "",
-    precioAhora: "$28.500",
+    precioAhora: "$36.900",
     stock: "",
-    desc: "Cafetera de filtro con jarra de vidrio, placa térmica y apagado automático.",
+    desc: `Súmale calidez y estilo a cualquier ambiente de tu casa con esta alfombra nórdica de pelo largo, suave y ultra cómoda al tacto.
+
+          Medidas: 2,00 m x 1,40 m
+          Colores disponibles: Gris, Beige, Natural, Marrón, Blanco, Negro
+
+          ✅ Características:
+          - Pelo largo y suave, sensación premium bajo los pies
+          - Antialérgica
+          - Fácil de limpiar y mantener
+          - Diseño versátil: combina con cualquier ambiente moderno
+
+          Consultá stock y color disponible por mensaje. 💬 
+          Entrega en local (dirección a coordinar por mensaje). 📦`,
     specs: [
       { nombre: "Capacidad", valor: "12 tazas" },
       { nombre: "Potencia", valor: "900W" },

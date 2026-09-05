@@ -145,5 +145,23 @@
     "publicado": true,
     "createdAt": "2026-09-05T21:44:19.790Z",
     "updatedAt": "2026-09-05T21:44:19.790Z"
+  },
+  {
+    "id": 32,
+    "nombreProducto": "hola",
+    "descripcionProducto": "hola",
+    "precio": 34,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "a": "hola"
+    },
+    "imagen": "img/1788648275030_esquema_infernal_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T22:44:35.056Z",
+    "updatedAt": "2026-09-05T22:44:35.056Z"
   }
 ]

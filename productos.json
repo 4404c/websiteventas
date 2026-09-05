@@ -204,5 +204,25 @@
     "publicado": true,
     "createdAt": "2026-09-05T23:08:26.703Z",
     "updatedAt": "2026-09-05T23:08:26.703Z"
+  },
+  {
+    "id": 36,
+    "nombreProducto": "bb",
+    "descripcionProducto": "bb",
+    "precio": 13,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "bb": "bb"
+    },
+    "imagenes": [
+      "img/1788650274454_kku2l_tesoro_1.jpg"
+    ],
+    "publicado": true,
+    "createdAt": "2026-09-05T23:17:54.489Z",
+    "updatedAt": "2026-09-05T23:17:54.489Z"
   }
 ]

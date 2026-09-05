@@ -35,5 +35,24 @@
     "publicado": true,
     "createdAt": "2026-09-05T18:06:54.880Z",
     "updatedAt": "2026-09-05T18:06:54.880Z"
+  },
+  {
+    "id": 24,
+    "nombreProducto": "Hola mundo",
+    "descripcionProducto": "Mundo saludo",
+    "precio": 67,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "mundo": "hola",
+      "quetal": "bien"
+    },
+    "imagen": "img/1788633382931_IMG-20260904-WA0030.jpeg",
+    "publicado": true,
+    "createdAt": "2026-09-05T18:36:22.947Z",
+    "updatedAt": "2026-09-05T18:36:22.947Z"
   }
 ]

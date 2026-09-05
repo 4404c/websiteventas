@@ -72,5 +72,24 @@
     "publicado": true,
     "createdAt": "2026-09-05T21:05:35.494Z",
     "updatedAt": "2026-09-05T21:05:35.494Z"
+  },
+  {
+    "id": 27,
+    "nombreProducto": "Mishi",
+    "descripcionProducto": "Se porta mal",
+    "precio": 67,
+    "categorias": [
+      "Tecnología"
+    ],
+    "subcategoria": "Amino",
+    "marca": "Amino",
+    "atributos": {
+      "edad": "67",
+      "postre fav": "tiramisú"
+    },
+    "imagen": "img/1788642976365_tesoro_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T21:16:16.383Z",
+    "updatedAt": "2026-09-05T21:16:16.383Z"
   }
 ]

@@ -163,5 +163,26 @@
     "publicado": true,
     "createdAt": "2026-09-05T22:44:35.056Z",
     "updatedAt": "2026-09-05T22:44:35.056Z"
+  },
+  {
+    "id": 34,
+    "nombreProducto": "hola",
+    "descripcionProducto": "hola",
+    "precio": 34,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "a": "hola"
+    },
+    "imagenes": [
+      "img/1788648496449_nbse6_esquema_infernal_1.jpg",
+      "img/1788648496451_jca7o_tesoro_1.jpg"
+    ],
+    "publicado": true,
+    "createdAt": "2026-09-05T23:03:14.845Z",
+    "updatedAt": "2026-09-05T23:03:14.845Z"
   }
 ]

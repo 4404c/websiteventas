@@ -91,5 +91,23 @@
     "publicado": true,
     "createdAt": "2026-09-05T21:16:16.383Z",
     "updatedAt": "2026-09-05T21:16:16.383Z"
+  },
+  {
+    "id": 28,
+    "nombreProducto": "Moonlight",
+    "descripcionProducto": "Se porta bien",
+    "precio": 67,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "AMino",
+    "marca": "AMino",
+    "atributos": {
+      "edad": "19"
+    },
+    "imagen": "img/1788643043366_esquema_infernal_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T21:17:23.392Z",
+    "updatedAt": "2026-09-05T21:17:23.392Z"
   }
 ]

@@ -16,5 +16,24 @@
     "publicado": true,
     "createdAt": "2026-09-05T16:22:26.529Z",
     "updatedAt": "2026-09-05T16:22:26.529Z"
+  },
+  {
+    "id": 23,
+    "nombreProducto": "Producto random",
+    "descripcionProducto": "Producto ejemplo",
+    "precio": 6767,
+    "categorias": [
+      "Tecnología"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "color": "naranja",
+      "tipo de ficha": "C"
+    },
+    "imagen": "img/1788631614854_tesoro_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T18:06:54.880Z",
+    "updatedAt": "2026-09-05T18:06:54.880Z"
   }
 ]

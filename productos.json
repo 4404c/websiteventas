@@ -127,5 +127,23 @@
     "publicado": true,
     "createdAt": "2026-09-05T21:19:30.797Z",
     "updatedAt": "2026-09-05T21:19:30.797Z"
+  },
+  {
+    "id": 31,
+    "nombreProducto": "masha",
+    "descripcionProducto": "mashi",
+    "precio": 67,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "hola": "mundo"
+    },
+    "imagen": "img/1788644659776_esquema_infernal_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T21:44:19.790Z",
+    "updatedAt": "2026-09-05T21:44:19.790Z"
   }
 ]

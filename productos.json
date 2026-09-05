@@ -109,5 +109,23 @@
     "publicado": true,
     "createdAt": "2026-09-05T21:17:23.392Z",
     "updatedAt": "2026-09-05T21:17:23.392Z"
+  },
+  {
+    "id": 29,
+    "nombreProducto": "a",
+    "descripcionProducto": "a",
+    "precio": 3,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "a": "aaa"
+    },
+    "imagen": "img/1788643170764_esquema_infernal_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T21:19:30.797Z",
+    "updatedAt": "2026-09-05T21:19:30.797Z"
   }
 ]

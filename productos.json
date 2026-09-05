@@ -184,5 +184,25 @@
     "publicado": true,
     "createdAt": "2026-09-05T23:03:14.845Z",
     "updatedAt": "2026-09-05T23:03:14.845Z"
+  },
+  {
+    "id": 35,
+    "nombreProducto": "hola2",
+    "descripcionProducto": "hola2",
+    "precio": 12,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "a": "hola2"
+    },
+    "imagenes": [
+      "img/1788649706667_47pr2_tesoro_1.jpg"
+    ],
+    "publicado": true,
+    "createdAt": "2026-09-05T23:08:26.703Z",
+    "updatedAt": "2026-09-05T23:08:26.703Z"
   }
 ]

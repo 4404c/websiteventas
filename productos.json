@@ -54,5 +54,23 @@
     "publicado": true,
     "createdAt": "2026-09-05T18:36:22.947Z",
     "updatedAt": "2026-09-05T18:36:22.947Z"
+  },
+  {
+    "id": 26,
+    "nombreProducto": "Producto2",
+    "descripcionProducto": "prueba",
+    "precio": 13,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "p": "d"
+    },
+    "imagen": "img/1788642335466_edificio-de-fábrica-industrial-dibujos-animados-con-chimeneas-rayas-planta-fabricación-ilustración-vectorial-plana-417265850_1.webp",
+    "publicado": true,
+    "createdAt": "2026-09-05T21:05:35.494Z",
+    "updatedAt": "2026-09-05T21:05:35.494Z"
   }
 ]

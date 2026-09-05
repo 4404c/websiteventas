@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 22,
+    "nombreProducto": "a",
+    "descripcionProducto": "a",
+    "precio": 1,
+    "categorias": [
+      "Electrodoméstico"
+    ],
+    "subcategoria": "Genérico",
+    "marca": "Genérico",
+    "atributos": {
+      "a": "aaa"
+    },
+    "imagen": "img/1788625346492_esquema_infernal_1.jpg",
+    "publicado": true,
+    "createdAt": "2026-09-05T16:22:26.529Z",
+    "updatedAt": "2026-09-05T16:22:26.529Z"
+  }
+]

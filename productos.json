@@ -1,1 +1,121 @@
-
+{
+  "version": 1,
+  "actualizado": "2026-09-04T00:00:00Z",
+  "categorias": {
+    "tecnologia": [
+      "computadoras",
+      "auriculares",
+      "celulares",
+      "cargadores",
+      "powerbanks"
+    ],
+    "electrodomesticos": [
+      "cocina",
+      "limpieza",
+      "climatizacion"
+    ],
+    "hogar": [
+      "alfombras",
+      "decoracion",
+      "textil"
+    ]
+  },
+  "productos": [
+    {
+      "id": "prod_1788533021456",
+      "nombre": "Auriculares Bluetooth XYZ",
+      "descripcion": "Auriculares inalámbricos con cancelación de ruido...",
+      "precio": 15000,
+      "moneda": "ARS",
+      "categoria": "tecnologia",
+      "subcategoria": "auriculares",
+      "marca": "Generic",
+      "stock": true,
+      "publicado": true,
+      "destacado": false,
+      "imagenes": [
+        "img/1788533021456_tesoro_1.jpg"
+      ],
+      "atributos": {
+        "bluetooth": true,
+        "cancelacion_ruido": true,
+        "autonomia_horas": 20,
+        "conector": "USB-C"
+      },
+      "creado": "2026-09-04T00:00:00Z",
+      "actualizado": "2026-09-04T00:00:00Z"
+    },
+    {
+      "id": "prod_1788533099001",
+      "nombre": "Notebook Lenovo IdeaPad 15",
+      "descripcion": "Notebook 15.6\" con procesador i5 y 8GB RAM...",
+      "precio": 850000,
+      "moneda": "ARS",
+      "categoria": "tecnologia",
+      "subcategoria": "computadoras",
+      "marca": "Lenovo",
+      "stock": true,
+      "publicado": true,
+      "destacado": true,
+      "imagenes": [
+        "img/1788533099001_notebook_1.jpg",
+        "img/1788533099001_notebook_2.jpg"
+      ],
+      "atributos": {
+        "procesador": "Intel i5",
+        "ram_gb": 8,
+        "almacenamiento_gb": 512,
+        "pantalla_pulgadas": 15.6
+      },
+      "creado": "2026-09-04T00:00:00Z",
+      "actualizado": "2026-09-04T00:00:00Z"
+    },
+    {
+      "id": "prod_1788533112233",
+      "nombre": "Microondas Whirlpool 20L",
+      "descripcion": "Microondas digital con grill...",
+      "precio": 210000,
+      "moneda": "ARS",
+      "categoria": "electrodomesticos",
+      "subcategoria": "cocina",
+      "marca": "Whirlpool",
+      "stock": true,
+      "publicado": true,
+      "destacado": false,
+      "imagenes": [
+        "img/1788533112233_microondas_1.jpg"
+      ],
+      "atributos": {
+        "capacidad_litros": 20,
+        "potencia_watts": 700,
+        "voltaje": "220V",
+        "garantia_meses": 12
+      },
+      "creado": "2026-09-04T00:00:00Z",
+      "actualizado": "2026-09-04T00:00:00Z"
+    },
+    {
+      "id": "prod_1788533145678",
+      "nombre": "Alfombra Shaggy Gris 200x300",
+      "descripcion": "Alfombra de pelo largo, suave al tacto...",
+      "precio": 95000,
+      "moneda": "ARS",
+      "categoria": "hogar",
+      "subcategoria": "alfombras",
+      "marca": "Generic",
+      "stock": true,
+      "publicado": true,
+      "destacado": false,
+      "imagenes": [
+        "img/1788533145678_alfombra_1.jpg"
+      ],
+      "atributos": {
+        "medidas": "200x300cm",
+        "material": "poliester",
+        "color": "gris"
+      },
+      "creado": "2026-09-04T00:00:00Z",
+      "actualizado": "2026-09-04T00:00:00Z"
+    }
+  ]
+}

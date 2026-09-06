@@ -1,3 +1,26 @@
 [
-  
+  {
+    "id": 37,
+    "nombreProducto": "Alfombra Peluda Nórdica 2m x1,40m – Pelo Largo Premium",
+    "descripcionProducto": "Súmale calidez y estilo a cualquier ambiente de tu casa con esta alfombra nórdica de pelo largo, suave y ultra cómoda al tacto.  Medidas: 2,00 m x 1,40 m Colores disponibles: Gris, Beige, Natural, Marrón, Blanco, Negro  ✅ Características: - Pelo largo y suave, sensación premium bajo los pies - Antialérgica - Fácil de limpiar y mantener - Diseño versátil: combina con cualquier ambiente moderno  Consultá stock y color disponible por mensaje. 💬  Entrega en local (dirección a coordinar por mensaje). 📦",
+    "precio": 36.9,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "alfombras",
+    "marca": "",
+    "atributos": {
+      "Medidas": "2.00 m x 1.40 m",
+      "Colores disponibles": "Consultar colores disponibles."
+    },
+    "imagenes": [
+      "img/1788656132485_bjonw_770976787_3022423598089727_7094182061182492435_n.webp",
+      "img/1788656132485_l0386_771036421_2040861440131516_4254128383976765785_n.webp",
+      "img/1788656132485_2baie_770976799_1054787070650971_1238800981982627902_n.webp",
+      "img/1788656132485_8bss2_771309830_1080028228033550_675874436727614617_n.webp"
+    ],
+    "publicado": true,
+    "createdAt": "2026-09-06T00:55:32.556Z",
+    "updatedAt": "2026-09-06T00:55:32.556Z"
+  }
 ]

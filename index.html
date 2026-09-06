@@ -9,7 +9,8 @@
 <body>
 
 <header>
-  <div class="logo" onclick="mostrarCatalogo()">CEIBO<span>.</span></div>
+  <img class="logo" src="img/logo-ceibo.png" alt="CEIBO" onclick="mostrarCatalogo()">
+  <input type="text" id="buscador" class="buscador" placeholder="Buscar producto...">
   <nav>
     <a href="#" onclick="mostrarCatalogo(); return false;">Catálogo</a>
     <a href="https://wa.me/5490000000000" target="_blank">Contacto</a>
@@ -20,9 +21,22 @@
 
   <!-- ===== VISTA 1: CATALOGO ===== -->
   <div id="vista-catalogo">
-    <h2 class="grilla-titulo">Catálogo</h2>
-    <input type="text" id="buscador" class="buscador" placeholder="Buscar producto...">
-    <div class="filtros" id="filtros"></div>
+    <div class="filtros-fila">
+      <div class="filtro-dropdown">
+        <button class="filtro-toggle" id="filtro-categoria-toggle" onclick="toggleFiltroLista(event, 'categoria')">
+          <span id="filtro-categoria-actual">Categoría: Todos</span>
+          <span class="filtro-flecha">&#9662;</span>
+        </button>
+        <div class="filtro-lista oculto" id="filtro-categoria-lista"></div>
+      </div>
+      <div class="filtro-dropdown">
+        <button class="filtro-toggle" id="filtro-subcategoria-toggle" onclick="toggleFiltroLista(event, 'subcategoria')">
+          <span id="filtro-subcategoria-actual">Subcategoría: Todos</span>
+          <span class="filtro-flecha">&#9662;</span>
+        </button>
+        <div class="filtro-lista oculto" id="filtro-subcategoria-lista"></div>
+      </div>
+    </div>
     <div class="grilla" id="grilla-productos"></div>
   </div>
 
@@ -56,8 +70,7 @@
 
 <footer>Retiro en punto físico &middot; Envíos a coordinar</footer>
 
-<!-- El orden importa: productos.js primero, app.js después -->
-<script src="productos.js"></script>
+<!-- El catálogo ahora se carga desde productos.json (ver app.js) -->
 <script src="app.js"></script>
 </body>
 </html>

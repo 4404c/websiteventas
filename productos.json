@@ -22,5 +22,27 @@
     "publicado": true,
     "createdAt": "2026-09-06T00:55:32.556Z",
     "updatedAt": "2026-09-06T00:55:32.556Z"
+  },
+  {
+    "id": 38,
+    "nombreProducto": "Perfume Fragrance World John Gustav Homme Amaze Eau de Parfum 100 ml",
+    "descripcionProducto": "Perfume Fragrance World John Gustav Homme Amaze Eau de Parfum 100 ml Se vende nuevo, en excelente estado.",
+    "precio": 49900,
+    "categorias": [
+      "Hogar"
+    ],
+    "subcategoria": "climatizacion",
+    "marca": "John Gustav",
+    "atributos": {
+      "Presentación": "100 ml",
+      "🔹 Concentración": "Eau de Parfum (EDP)"
+    },
+    "imagenes": [
+      "img/1788805588010_ahimc_771496618_1851231006056790_7145857885362921790_n.jpg",
+      "img/1788805588010_oz3do_763139600_2065921847362037_1534621555225717978_n.jpg"
+    ],
+    "publicado": true,
+    "createdAt": "2026-09-07T18:26:28.080Z",
+    "updatedAt": "2026-09-07T18:26:28.080Z"
   }
 ]
